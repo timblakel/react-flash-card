@@ -1,7 +1,11 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
+import { flashCard } from "../interfaces/flashCard";
 
+export function ControlButtons({setCurrentCard}: {setCurrentCard: (f: flashCard) => void}): JSX.Element {
+    function flipCard(flashCard: flashCard) {
 
-export function ControlButtons(): JSX.Element {
+    }
+
     return <Col>
         <Container>
             <Row>
