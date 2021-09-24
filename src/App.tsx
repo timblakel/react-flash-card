@@ -19,6 +19,9 @@ function App() {
   return (
     <Container className="App">
       <Row>
+        <h1>Study Flash Cards</h1>
+      </Row>
+      <Row>
         <ControlButtons setCurrentCard={setCurrentCard} currentCard={currentCard}></ControlButtons>
         <FlashCardViewer currentCard={currentCard}></FlashCardViewer>
       </Row>
