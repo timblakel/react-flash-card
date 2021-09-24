@@ -21,13 +21,19 @@ export function ControlButtons({setCurrentCard, currentCard, setCardPile, cardPi
         setCardPile(newPile);
     }
 
+    function nextCard() {
+        let currInd: number = cardPile.indexOf(currentCard,0);
+        let nextInd: number = (currInd + 1) % cardPile.length;
+        setCurrentCard(cardPile[nextInd]);
+    }
+
     return <Col>
         <Container>
             <Row>
                 <Button onClick={flipCard} variant="primary" className="m-2">Flip Card</Button>
             </Row>
             <Row>
-                <Button variant="secondary" className="m-2">Next Card</Button>
+                <Button onClick={nextCard} variant="secondary" className="m-2">Next Card</Button>
             </Row>
         </Container>
     </Col>
