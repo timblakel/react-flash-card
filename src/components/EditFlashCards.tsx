@@ -43,7 +43,7 @@ export function EditFlashCards({cardPile, setCardPile}: {cardPile: flashCard[], 
                             setNewBack(event.target.value);
                         }} />
                     </Form.Group>
-                    <Button onClick={addCard} variant="secondary">Add Flash Card</Button>
+                    <Button onClick={addCard} variant="secondary" type="reset">Add Flash Card</Button>
                 </Form>
             </Col>
             <Col>
