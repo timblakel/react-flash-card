@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { FlashCardViewer } from './components/FlashCardViewer';
@@ -35,10 +35,18 @@ function App() {
         <h1>Study Flash Cards</h1>
       </Row>
       <Row>
-        <ControlButtons setCurrentCard={setCurrentCard} currentCard={currentCard}></ControlButtons>
+        <ControlButtons 
+        setCurrentCard={setCurrentCard} currentCard={currentCard} 
+        setCardPile={setCardPile} cardPile={cardPile}></ControlButtons>
         <FlashCardViewer currentCard={currentCard}></FlashCardViewer>
       </Row>
       <EditFlashCards cardPile={cardPile}></EditFlashCards>
+      {/* <Row>
+        <Button onClick={()=>{
+          console.log(`cardPile: ${JSON.stringify(cardPile)}`);
+        }
+        }>Testing button</Button>
+      </Row> */}
     </Container>
   );
 }
