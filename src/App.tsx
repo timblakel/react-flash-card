@@ -46,7 +46,7 @@ function App() {
         setCardPile={setCardPile} cardPile={cardPile}></ControlButtons>
         <FlashCardViewer currentCard={currentCard}></FlashCardViewer>
       </Row>
-      <EditFlashCards cardPile={cardPile}></EditFlashCards>
+      <EditFlashCards cardPile={cardPile} setCardPile={setCardPile}></EditFlashCards>
       {/* <Row>
         <Button onClick={()=>{
           console.log(`cardPile: ${JSON.stringify(cardPile)}`);
