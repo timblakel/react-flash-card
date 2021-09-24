@@ -24,6 +24,7 @@ const LOCAL_STORAGE_CARDS = 'flash-cards';
 
 function getLocalCards(): flashCard[] {
   let rawCards: string | null = localStorage.getItem(LOCAL_STORAGE_CARDS);
+  // console.log(`rawCards: ${rawCards}`);
   if (rawCards === null) {
     return INITIAL_CARDS;
   } else {
@@ -32,8 +33,8 @@ function getLocalCards(): flashCard[] {
 }
 
 function App() {
-  const [currentCard, setCurrentCard] = useState<flashCard>(INITIAL_CARDS[0]);
-  const [cardPile, setCardPile] = useState<flashCard[]>(INITIAL_CARDS);
+  const [cardPile, setCardPile] = useState<flashCard[]>(getLocalCards);
+  const [currentCard, setCurrentCard] = useState<flashCard>(cardPile[0]);
 
   return (
     <Container className="App">
