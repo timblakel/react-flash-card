@@ -7,27 +7,33 @@ import { ControlButtons } from './components/ControlButtons';
 import { flashCard } from './interfaces/flashCard';
 import { EditFlashCards } from './components/EditFlashCards';
 
-const INITIAL_CARD: flashCard = {
-  id: 1,
-  front: 'Front',
-  back: 'Back',
-  isFront: true
-}
+const INITIAL_CARDS: flashCard[] = [{
+    id: 1,
+    front: 'Front',
+    back: 'Back',
+    isFront: true
+  },
+  {
+    id: 2,
+    front: 'Up side',
+    back: 'Down side',
+    isFront: true
+  }]
 
 const LOCAL_STORAGE_CARDS = 'flash-cards';
 
 function getLocalCards(): flashCard[] {
   let rawCards: string | null = localStorage.getItem(LOCAL_STORAGE_CARDS);
   if (rawCards === null) {
-    return [INITIAL_CARD];
+    return INITIAL_CARDS;
   } else {
     return JSON.parse(rawCards);
   }
 }
 
 function App() {
-  const [currentCard, setCurrentCard] = useState<flashCard>(INITIAL_CARD);
-  const [cardPile, setCardPile] = useState<flashCard[]>([INITIAL_CARD]);
+  const [currentCard, setCurrentCard] = useState<flashCard>(INITIAL_CARDS[0]);
+  const [cardPile, setCardPile] = useState<flashCard[]>(INITIAL_CARDS);
 
   return (
     <Container className="App">
