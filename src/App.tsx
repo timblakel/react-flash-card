@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Container, Row, } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { FlashCardViewer } from './components/FlashCardViewer';
 import { ControlButtons } from './components/ControlButtons';
 import { flashCard } from './interfaces/flashCard';
+import { EditFlashCards } from './components/EditFlashCards';
 
 const INITIAL_CARD: flashCard = {
   id: 1,
@@ -25,6 +26,7 @@ function App() {
         <ControlButtons setCurrentCard={setCurrentCard} currentCard={currentCard}></ControlButtons>
         <FlashCardViewer currentCard={currentCard}></FlashCardViewer>
       </Row>
+      <EditFlashCards></EditFlashCards>
     </Container>
   );
 }
