@@ -19,7 +19,7 @@ function App() {
   return (
     <Container className="App">
       <Row>
-        <ControlButtons></ControlButtons>
+        <ControlButtons setCurrentCard={setCurrentCard} currentCard={currentCard}></ControlButtons>
         <FlashCardViewer currentCard={currentCard}></FlashCardViewer>
       </Row>
     </Container>
