@@ -20,7 +20,7 @@ export function EditFlashCards({cardPile}: {cardPile: flashCard[]}): JSX.Element
         </Row>
         <Row>
             <Col>
-                <Button variant="secondary">Save placeholder</Button>
+                <Button onClick={saveCards} variant="secondary">Save Cards</Button>
             </Col>
         </Row>
     </Container>
