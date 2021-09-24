@@ -14,8 +14,20 @@ const INITIAL_CARD: flashCard = {
   isFront: true
 }
 
+const LOCAL_STORAGE_CARDS = 'flash-cards';
+
+function getLocalCards(): flashCard[] {
+  let rawCards: string | null = localStorage.getItem(LOCAL_STORAGE_CARDS);
+  if (rawCards === null) {
+    return [INITIAL_CARD];
+  } else {
+    return JSON.parse(rawCards);
+  }
+}
+
 function App() {
   const [currentCard, setCurrentCard] = useState<flashCard>(INITIAL_CARD);
+  const [cardPile, setCardPile] = useState<flashCard[]>([INITIAL_CARD]);
 
   return (
     <Container className="App">
@@ -26,7 +38,7 @@ function App() {
         <ControlButtons setCurrentCard={setCurrentCard} currentCard={currentCard}></ControlButtons>
         <FlashCardViewer currentCard={currentCard}></FlashCardViewer>
       </Row>
-      <EditFlashCards></EditFlashCards>
+      <EditFlashCards cardPile={cardPile}></EditFlashCards>
     </Container>
   );
 }
