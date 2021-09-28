@@ -28,6 +28,9 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
             isFront: true
         }
         setCardPile([...cardPile, newCard]);
+
+        // Set current card to new card
+        setCurrentCard(newCard);
     }
 
     // Set newCurrCard state as form is editted
