@@ -55,6 +55,11 @@ function App() {
         }
         }>Testing button</Button>
       </Row> */}
+      <Row className="App-footer">
+        <p>
+          Tim's Portfolio
+        </p>
+      </Row>
     </Container>
   );
 }
