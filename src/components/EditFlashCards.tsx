@@ -121,16 +121,16 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
             </Col>
         </Row>   
     
-    <Modal show={oneCard} onHide={()=>{setOneCard(false)}}>
-        <Modal.Header closeButton>
-          <Modal.Title>Only one card left!</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>You cannot delete the current card. It is the only remaining card.</Modal.Body>
-        <Modal.Footer>
-          <Button onClick={()=>{setOneCard(false)}} variant="secondary">
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </Container>
+        <Modal show={oneCard} onHide={()=>{setOneCard(false)}}>
+            <Modal.Header closeButton>
+            <Modal.Title>Only one card left!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>You cannot delete the current card. It is the only remaining card.</Modal.Body>
+            <Modal.Footer>
+            <Button onClick={()=>{setOneCard(false)}} variant="secondary">
+                Close
+            </Button>
+            </Modal.Footer>
+        </Modal>
+    </Container>    
 }
