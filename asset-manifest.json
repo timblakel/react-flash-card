@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-flash-card/static/css/main.598b151d.chunk.css",
-    "main.js": "/react-flash-card/static/js/main.fb7aa4f8.chunk.js",
-    "main.js.map": "/react-flash-card/static/js/main.fb7aa4f8.chunk.js.map",
+    "main.js": "/react-flash-card/static/js/main.1b01f2ea.chunk.js",
+    "main.js.map": "/react-flash-card/static/js/main.1b01f2ea.chunk.js.map",
     "runtime-main.js": "/react-flash-card/static/js/runtime-main.7cc81a78.js",
     "runtime-main.js.map": "/react-flash-card/static/js/runtime-main.7cc81a78.js.map",
     "static/css/2.f2512455.chunk.css": "/react-flash-card/static/css/2.f2512455.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.f2512455.chunk.css",
     "static/js/2.3dd60acc.chunk.js",
     "static/css/main.598b151d.chunk.css",
-    "static/js/main.fb7aa4f8.chunk.js"
+    "static/js/main.1b01f2ea.chunk.js"
   ]
 }
