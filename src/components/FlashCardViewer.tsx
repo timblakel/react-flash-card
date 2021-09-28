@@ -22,7 +22,7 @@ export function FlashCardViewer({currentCard}: {currentCard: flashCard}): JSX.El
     }
 
     return <Col>
-        <Card bg={getCardBg()} text="light">
+        <Card bg={getCardBg()} text="light" data-testid="flashcard">
             <Card.Header>{getCardHeader()}</Card.Header>
             <Card.Body>
                 {currentCard.isFront && <Card.Text>
