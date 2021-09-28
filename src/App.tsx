@@ -39,7 +39,7 @@ function App() {
   return (
     <Container className="App">
       <Row>
-        <h1>Study Flash Cards</h1>
+        <h1 className="mb-5">Study Flash Cards</h1>
       </Row>
       <Row>
         <ControlButtons 
