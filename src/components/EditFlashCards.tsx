@@ -46,13 +46,30 @@ export function EditFlashCards({cardPile, setCardPile}: {cardPile: flashCard[], 
                     <Button onClick={addCard} variant="secondary" type="reset">Add Flash Card</Button>
                 </Form>
             </Col>
-            <Col>
-                <Button variant="secondary">Edit Current Card placeholder</Button>
+            <Col style={{textAlign: "left"}}>
+                <Form>
+                    <Form.Group className="mb-1" controlId="newCardFront">
+                        <Form.Label>Front</Form.Label>
+                        <Form.Control type="text" placeholder="card front"
+                        onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
+                            setNewFront(event.target.value);
+                        }} />
+                    </Form.Group>
+
+                    <Form.Group className="mb-2" controlId="newCardBack">
+                        <Form.Label>Back</Form.Label>
+                        <Form.Control type="text" placeholder="card back" 
+                        onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
+                            setNewBack(event.target.value);
+                        }} />
+                    </Form.Group>
+                    <Button variant="secondary">Edit Current Card placeholder</Button>
+                </Form>            
             </Col>
         </Row>
         <Row>
             <Col>
-                <Button onClick={saveCards} variant="secondary">Save Cards</Button>
+                <Button onClick={saveCards} variant="secondary" className="mt-4">Save Cards</Button>
             </Col>
         </Row>
     </Container>
