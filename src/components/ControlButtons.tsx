@@ -33,7 +33,7 @@ export function ControlButtons({setCurrentCard, currentCard, setCardPile, cardPi
                 <Button onClick={flipCard} variant="primary" className="m-2">Flip Card</Button>
             </Row>
             <Row>
-                <Button onClick={nextCard} variant="secondary" className="m-2">Next Card</Button>
+                <Button onClick={nextCard} variant="primary" className="m-2">Next Card</Button>
             </Row>
         </Container>
     </Col>
