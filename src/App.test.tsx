@@ -32,3 +32,13 @@ test('back of card shows on Flip Card button click', async () => {
   expect(cardBack).toBeInTheDocument();
 });
 
+// test('add new card displays new card', () => {
+//   render(<App />);
+
+//   // enter into form
+  
+
+//   // click new card button
+
+//   // await for new flaschard to appear
+// });
