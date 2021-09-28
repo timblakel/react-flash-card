@@ -12,6 +12,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
     setCurrentCard: (f: flashCard)=>void}): JSX.Element {
     const [newFront, setNewFront] = useState<string>("Front");
     const [newBack, setNewBack] = useState<string>("Back");
+    const [newCurrCard, setNewCurrCard] = useState<flashCard>({...currentCard});
 
     function saveCards(): void {
         localStorage.setItem(LOCAL_STORAGE_CARDS,JSON.stringify(cardPile));
@@ -26,6 +27,27 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
             isFront: true
         }
         setCardPile([...cardPile, newCard]);
+    }
+
+    // Set newCurrCard state as form is editted
+    function editNewCurrCard(newContent: string, frontOrBack: boolean): void {
+        let tmpCard: flashCard = {...newCurrCard};
+        if (frontOrBack) {
+            tmpCard.front = newContent;
+        } else {
+            tmpCard.back = newContent;
+        }
+        setNewCurrCard(tmpCard);
+    }
+    
+    // Push changes to current card (setCurrentCard and setCardPile)
+    function saveNewCurrCard() {
+        let tmpCard: flashCard = {...newCurrCard};
+        let currInd: number = cardPile.indexOf(currentCard,0);
+        let newPile: flashCard[] = [...cardPile];
+        newPile[currInd] = tmpCard;
+        setCardPile(newPile);     
+        setCurrentCard(tmpCard);   
     }
 
     return <Container className="border border-info p-2 m-4 ml-auto">
@@ -59,7 +81,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
                         <Form.Label>Front</Form.Label>
                         <Form.Control type="text" placeholder={currentCard.front}
                         onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
-                            setNewFront(event.target.value);
+                            editNewCurrCard(event.target.value,true);
                         }} />
                     </Form.Group>
 
@@ -67,10 +89,10 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
                         <Form.Label>Back</Form.Label>
                         <Form.Control type="text" placeholder={currentCard.back} 
                         onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
-                            setNewBack(event.target.value);
+                            editNewCurrCard(event.target.value,false);
                         }} />
                     </Form.Group>
-                    <Button variant="secondary">Edit Current Card placeholder</Button>
+                    <Button onClick={saveNewCurrCard} variant="secondary">Save Current Card</Button>
                 </Form>            
             </Col>
         </Row>
