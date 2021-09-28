@@ -29,6 +29,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard}: {
 
     return <Container className="border border-info p-2 m-4 ml-auto">
         <Row>
+            {/* Add new card */}
             <Col style={{textAlign: "left"}}>
                 <Form>
                     <Form.Group className="mb-1" controlId="newCardFront">
@@ -49,6 +50,8 @@ export function EditFlashCards({cardPile, setCardPile, currentCard}: {
                     <Button onClick={addCard} variant="secondary" type="reset">Add Flash Card</Button>
                 </Form>
             </Col>
+
+            {/* Edit Current Card */}
             <Col style={{textAlign: "left"}}>
                 <Form>
                     <Form.Group className="mb-1" controlId="newCardFront">
