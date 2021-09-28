@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import { Modal, Button, Col, Container, Form, Row } from "react-bootstrap";
 import { flashCard } from "../interfaces/flashCard";
 // import { FlashCardViewer } from "./FlashCardViewer";
 
@@ -13,6 +13,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
     const [newFront, setNewFront] = useState<string>("Front");
     const [newBack, setNewBack] = useState<string>("Back");
     const [newCurrCard, setNewCurrCard] = useState<flashCard>({...currentCard});
+    const [oneCard, setOneCard] = useState<boolean>(false);
 
     function saveCards(): void {
         localStorage.setItem(LOCAL_STORAGE_CARDS,JSON.stringify(cardPile));
@@ -63,6 +64,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
             setCardPile(tmpPile);
         } else {
             // some warning about being on the last card
+            setOneCard(true);
         }
     }
 
@@ -117,6 +119,18 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
             <Col>
                 <Button onClick={saveCards} variant="secondary" className="mt-4">Save Cards</Button>
             </Col>
-        </Row>
+        </Row>   
+    
+    <Modal show={oneCard} onHide={()=>{setOneCard(false)}}>
+        <Modal.Header closeButton>
+          <Modal.Title>Only one card left!</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>You cannot delete the current card. It is the only remaining card</Modal.Body>
+        <Modal.Footer>
+          <Button onClick={()=>{setOneCard(false)}} variant="secondary">
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
 }
