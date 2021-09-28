@@ -30,4 +30,5 @@ test('back of card shows on Flip Card button click', async () => {
 
   const cardBack = await within(screen.getByTestId("flashcard")).findByText("Flashcard Back");
   expect(cardBack).toBeInTheDocument();
-})
+});
+
