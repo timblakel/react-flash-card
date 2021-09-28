@@ -57,7 +57,7 @@ function App() {
       </Row> */}
       <Row className="App-footer">
         <p>
-          Tim's Portfolio
+          <a href="https://timblakel.github.io/">Tim's Portfolio</a>
         </p>
       </Row>
     </Container>
