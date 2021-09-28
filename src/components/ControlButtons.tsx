@@ -21,10 +21,21 @@ export function ControlButtons({setCurrentCard, currentCard, setCardPile, cardPi
         setCardPile(newPile);
     }
 
+    // Go to next card by index in cardPile
     function nextCard() {
+        let tmpCard: flashCard = currentCard;
+
+        // console.log(`card pile: ${JSON.stringify(cardPile)}`);
+
         let currInd: number = cardPile.indexOf(currentCard,0);
         let nextInd: number = (currInd + 1) % cardPile.length;
         setCurrentCard(cardPile[nextInd]);
+
+        // Reset previous card to be face up
+        tmpCard.isFront = true;
+        let tmpPile: flashCard[] = [...cardPile];
+        tmpPile[currInd] = tmpCard;
+        setCardPile(tmpPile);
     }
 
     return <Col>
