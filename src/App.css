@@ -17,3 +17,9 @@
 .App-link {
   color: #61dafb;
 }
+
+.App-footer {
+  margin-top: 5em;
+  margin-left: 1em;
+  text-align: start;
+}
