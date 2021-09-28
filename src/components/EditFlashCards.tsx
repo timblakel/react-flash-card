@@ -93,6 +93,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
                         }} />
                     </Form.Group>
                     <Button onClick={saveNewCurrCard} variant="secondary">Save Current Card</Button>
+                    <Button variant="secondary" className="ms-2 me-2">Delete Current Card</Button>
                 </Form>            
             </Col>
         </Row>
