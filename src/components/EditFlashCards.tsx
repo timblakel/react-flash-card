@@ -50,6 +50,22 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
         setCurrentCard(tmpCard);   
     }
 
+    // Delete current card
+    // set current card to next index and update cardPile
+    function deleteCurrCard() {
+        if (cardPile.length > 1) {
+            let currInd: number = cardPile.indexOf(currentCard,0);
+            let nextInd: number = (currInd + 1) % cardPile.length;
+            setCurrentCard(cardPile[nextInd]);
+
+            let tmpPile: flashCard[] = [...cardPile];
+            tmpPile.splice(currInd,1);
+            setCardPile(tmpPile);
+        } else {
+            // some warning about being on the last card
+        }
+    }
+
     return <Container className="border border-info p-2 m-4 ml-auto">
         <Row>
             {/* Add new card */}
@@ -93,7 +109,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
                         }} />
                     </Form.Group>
                     <Button onClick={saveNewCurrCard} variant="secondary">Save Current Card</Button>
-                    <Button variant="secondary" className="ms-2 me-2">Delete Current Card</Button>
+                    <Button onClick={deleteCurrCard} variant="secondary" className="ms-2 me-2">Delete Current Card</Button>
                 </Form>            
             </Col>
         </Row>
