@@ -116,9 +116,13 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
             </Col>
         </Row>
         <Row>
-            <Col>
-                <Button onClick={saveCards} variant="secondary" className="mt-4">Save Cards</Button>
+        <Col></Col>
+            <Col xs={8}>
+                <div className="d-grid gap-2">
+                    <Button onClick={saveCards} variant="primary" className="mt-4">Save Cards</Button>
+                </div>
             </Col>
+            <Col></Col>
         </Row>   
     
         <Modal show={oneCard} onHide={()=>{setOneCard(false)}}>
