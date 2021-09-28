@@ -5,7 +5,10 @@ import { FlashCardViewer } from "./FlashCardViewer";
 
 const LOCAL_STORAGE_CARDS = 'flash-cards';
 
-export function EditFlashCards({cardPile, setCardPile}: {cardPile: flashCard[], setCardPile: (f: flashCard[])=>void}): JSX.Element {
+export function EditFlashCards({cardPile, setCardPile, currentCard}: {
+    cardPile: flashCard[], 
+    setCardPile: (f: flashCard[])=>void,
+    currentCard: flashCard}): JSX.Element {
     const [newFront, setNewFront] = useState<string>("Front");
     const [newBack, setNewBack] = useState<string>("Back");
 
