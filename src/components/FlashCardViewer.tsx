@@ -13,8 +13,16 @@ export function FlashCardViewer({currentCard}: {currentCard: flashCard}): JSX.El
         }
     }
 
+    function getCardBg(): string {
+        if (currentCard.isFront) {
+            return "primary";
+        } else {
+            return "danger";
+        }
+    }
+
     return <Col>
-        <Card>
+        <Card bg={getCardBg()} text="light">
             <Card.Header>{getCardHeader()}</Card.Header>
             <Card.Body>
                 {currentCard.isFront && <Card.Text>
