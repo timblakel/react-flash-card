@@ -56,7 +56,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard}: {
                 <Form>
                     <Form.Group className="mb-1" controlId="newCurrFront">
                         <Form.Label>Front</Form.Label>
-                        <Form.Control type="text" placeholder="card front"
+                        <Form.Control type="text" placeholder={currentCard.front}
                         onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
                             setNewFront(event.target.value);
                         }} />
@@ -64,7 +64,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard}: {
 
                     <Form.Group className="mb-2" controlId="newCurrBack">
                         <Form.Label>Back</Form.Label>
-                        <Form.Control type="text" placeholder="card back" 
+                        <Form.Control type="text" placeholder={currentCard.back} 
                         onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
                             setNewBack(event.target.value);
                         }} />
