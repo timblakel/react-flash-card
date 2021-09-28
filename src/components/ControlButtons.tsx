@@ -41,10 +41,22 @@ export function ControlButtons({setCurrentCard, currentCard, setCardPile, cardPi
     return <Col>
         <Container>
             <Row>
-                <Button onClick={flipCard} variant="primary" className="m-2">Flip Card</Button>
+                <Col></Col>
+                <Col xs={8}>
+                    <div className="d-grid gap-2">
+                        <Button onClick={flipCard} variant="primary" className="m-2 p-2">Flip Card</Button>
+                    </div>
+                </Col>
+                <Col></Col>            
             </Row>
             <Row>
-                <Button onClick={nextCard} variant="primary" className="m-2">Next Card</Button>
+                <Col></Col>
+                <Col xs={8}>
+                    <div className="d-grid gap-2">
+                        <Button onClick={nextCard} variant="primary" className="m-2 p-2">Next Card</Button>
+                    </div>
+                </Col>
+                <Col></Col>
             </Row>
         </Container>
     </Col>
