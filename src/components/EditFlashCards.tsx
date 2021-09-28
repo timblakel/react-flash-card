@@ -10,9 +10,15 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
     setCardPile: (f: flashCard[])=>void,
     currentCard: flashCard,
     setCurrentCard: (f: flashCard)=>void}): JSX.Element {
+
+    // Adding new card with form
     const [newFront, setNewFront] = useState<string>("Front");
     const [newBack, setNewBack] = useState<string>("Back");
+
+    // Editing current card with form
     const [newCurrCard, setNewCurrCard] = useState<flashCard>({...currentCard});
+
+    // Boolean, true when only one card is left in the pile
     const [oneCard, setOneCard] = useState<boolean>(false);
 
     function saveCards(): void {
