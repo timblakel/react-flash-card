@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import { flashCard } from "../interfaces/flashCard";
-import { FlashCardViewer } from "./FlashCardViewer";
+// import { FlashCardViewer } from "./FlashCardViewer";
 
 const LOCAL_STORAGE_CARDS = 'flash-cards';
 
