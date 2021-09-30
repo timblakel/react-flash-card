@@ -59,12 +59,6 @@ function App() {
       </Row>
       <EditFlashCards cardPile={cardPile} setCardPile={setCardPile} 
         currentCard={currentCard} setCurrentCard={setCurrentCard}></EditFlashCards>
-      {/* <Row>
-        <Button onClick={()=>{
-          console.log(`cardPile: ${JSON.stringify(cardPile)}`);
-        }
-        }>Testing button</Button>
-      </Row> */}
       <Row className="m-4">
         <CardTable cardPile={cardPile}></CardTable>
       </Row>
