@@ -50,7 +50,7 @@ function App() {
           </Row>         
         </h1>
       </Row>
-      <Row>
+      <Row className="mb-4">
         <ControlButtons 
         setCurrentCard={setCurrentCard} currentCard={currentCard} 
         setCardPile={setCardPile} cardPile={cardPile}></ControlButtons>
