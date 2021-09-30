@@ -1,6 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { flashCard } from "../interfaces/flashCard";
 
-export function CardTable() {
+export function CardTable({cardPile}: {cardPile: flashCard[]}) {
 
     return (<Container className="mt-2">
         <Row>
@@ -18,18 +19,12 @@ export function CardTable() {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                </tr>
-                <tr>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                </tr>
-                <tr>
-                <td>Larry</td>
-                <td>the Bird</td>
-                </tr>
+                {cardPile.map( (card: flashCard) =>
+                    <tr>
+                    <td>{card.front}</td>
+                    <td>{card.back}</td>
+                    </tr>
+                )}
             </tbody>
             </table>
         </Col>
