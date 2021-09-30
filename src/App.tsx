@@ -65,7 +65,7 @@ function App() {
         }
         }>Testing button</Button>
       </Row> */}
-      <Row>
+      <Row className="m-4">
         <CardTable></CardTable>
       </Row>
       <Row className="App-footer">
