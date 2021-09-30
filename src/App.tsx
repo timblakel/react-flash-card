@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { FlashCardViewer } from './components/FlashCardViewer';
@@ -39,7 +39,16 @@ function App() {
   return (
     <Container className="App">
       <Row>
-        <h1 class="site-title">Study Flashcards</h1>
+        <h1 className="site-title">
+          <Row>
+            <Col>
+                STUDY FLASHCARDS
+            </Col>
+            <Col className="right-align">
+              | Tim Longoria
+            </Col> 
+          </Row>         
+        </h1>
       </Row>
       <Row>
         <ControlButtons 
