@@ -77,7 +77,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
         }
     }
 
-    return <Container className="border border-info p-2 m-4">
+    return <Container className="border border-4 mt-3 p-2 rounded">
         <Row>
             {/* Add new card */}
             <Col style={{textAlign: "left"}}>
