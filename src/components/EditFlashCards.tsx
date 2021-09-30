@@ -17,6 +17,7 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
 
     // Editing current card with form
     const [newCurrCard, setNewCurrCard] = useState<flashCard>({...currentCard});
+    const [currCardIsEdit, setCurrCardIsEdit] = useState<boolean>(false);
 
     // Boolean, true when only one card is left in the pile
     const [oneCard, setOneCard] = useState<boolean>(false);
@@ -48,16 +49,22 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
             tmpCard.back = newContent;
         }
         setNewCurrCard(tmpCard);
+        setCurrCardIsEdit(true);
     }
     
     // Push changes to current card (setCurrentCard and setCardPile)
     function saveNewCurrCard() {
+        if (!currCardIsEdit) {
+            // Don't save new card if it was not editted
+            return;
+        }
         let tmpCard: flashCard = {...newCurrCard};
         let currInd: number = cardPile.indexOf(currentCard,0);
         let newPile: flashCard[] = [...cardPile];
         newPile[currInd] = tmpCard;
         setCardPile(newPile);     
-        setCurrentCard(tmpCard);   
+        setCurrentCard(tmpCard);  
+        setCurrCardIsEdit(false); 
     }
 
     // Delete current card
@@ -135,8 +142,8 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
                                     editNewCurrCard(event.target.value,false);
                                 }} />
                             </Form.Group>
-                            <Button onClick={saveNewCurrCard} variant="secondary">Save Current Card</Button>
-                            <Button onClick={deleteCurrCard} variant="secondary" className="ms-2 me-2">Delete Current Card</Button>
+                            <Button onClick={saveNewCurrCard} variant="secondary" type="reset">Save Current Card</Button>
+                            <Button onClick={deleteCurrCard} variant="secondary" className="ms-2 me-2" type="reset">Delete Current Card</Button>
                         </Form>
                     </Col>
                 </Row>            
