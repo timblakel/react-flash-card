@@ -30,6 +30,10 @@
   font-weight: lighter;
 }
 
+.CardViewer {
+  margin-bottom: 4em;
+}
+
 .App-link {
   color: #61dafb;
 }
