@@ -12,9 +12,6 @@ export function ControlButtons({setCurrentCard, currentCard, setCardPile, cardPi
         let flippedCard: flashCard = {...currentCard};
         flippedCard.isFront = !flippedCard.isFront;
         setCurrentCard(flippedCard);
-        // console.log(`flipped card: ${JSON.stringify(flippedCard)}`);
-        // console.log(`cardPile ${JSON.stringify(cardPile)}`);
-        // console.log(`currentCard: ${JSON.stringify(currentCard)}`);
         let currInd: number = cardPile.indexOf(currentCard,0);
         let newPile: flashCard[] = [...cardPile];
         newPile[currInd] = flippedCard;
@@ -24,9 +21,6 @@ export function ControlButtons({setCurrentCard, currentCard, setCardPile, cardPi
     // Go to next card by index in cardPile
     function nextCard() {
         let tmpCard: flashCard = currentCard;
-
-        // console.log(`card pile: ${JSON.stringify(cardPile)}`);
-
         let currInd: number = cardPile.indexOf(currentCard,0);
         let nextInd: number = (currInd + 1) % cardPile.length;
         setCurrentCard(cardPile[nextInd]);
