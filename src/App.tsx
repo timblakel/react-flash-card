@@ -6,6 +6,7 @@ import { FlashCardViewer } from './components/FlashCardViewer';
 import { ControlButtons } from './components/ControlButtons';
 import { flashCard } from './interfaces/flashCard';
 import { EditFlashCards } from './components/EditFlashCards';
+import { CardTable } from './components/CardTable';
 
 const INITIAL_CARDS: flashCard[] = [{
     id: 1,
