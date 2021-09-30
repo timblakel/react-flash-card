@@ -64,6 +64,9 @@ function App() {
         }
         }>Testing button</Button>
       </Row> */}
+      <Row>
+        <CardTable></CardTable>
+      </Row>
       <Row className="App-footer">
         <p>
           <a href="https://timblakel.github.io/">Tim's Portfolio</a>
