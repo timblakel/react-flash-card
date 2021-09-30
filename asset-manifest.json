@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/react-flash-card/static/css/main.edb3889e.chunk.css",
-    "main.js": "/react-flash-card/static/js/main.1d2be7f6.chunk.js",
-    "main.js.map": "/react-flash-card/static/js/main.1d2be7f6.chunk.js.map",
+    "main.css": "/react-flash-card/static/css/main.06ded1c5.chunk.css",
+    "main.js": "/react-flash-card/static/js/main.12c802b8.chunk.js",
+    "main.js.map": "/react-flash-card/static/js/main.12c802b8.chunk.js.map",
     "runtime-main.js": "/react-flash-card/static/js/runtime-main.7cc81a78.js",
     "runtime-main.js.map": "/react-flash-card/static/js/runtime-main.7cc81a78.js.map",
     "static/css/2.f2512455.chunk.css": "/react-flash-card/static/css/2.f2512455.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.bda2dd73.chunk.js.map": "/react-flash-card/static/js/3.bda2dd73.chunk.js.map",
     "index.html": "/react-flash-card/index.html",
     "static/css/2.f2512455.chunk.css.map": "/react-flash-card/static/css/2.f2512455.chunk.css.map",
-    "static/css/main.edb3889e.chunk.css.map": "/react-flash-card/static/css/main.edb3889e.chunk.css.map",
+    "static/css/main.06ded1c5.chunk.css.map": "/react-flash-card/static/css/main.06ded1c5.chunk.css.map",
     "static/js/2.aecff89d.chunk.js.LICENSE.txt": "/react-flash-card/static/js/2.aecff89d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7cc81a78.js",
     "static/css/2.f2512455.chunk.css",
     "static/js/2.aecff89d.chunk.js",
-    "static/css/main.edb3889e.chunk.css",
-    "static/js/main.1d2be7f6.chunk.js"
+    "static/css/main.06ded1c5.chunk.css",
+    "static/js/main.12c802b8.chunk.js"
   ]
 }
