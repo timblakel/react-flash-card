@@ -1,37 +1,38 @@
-import { Col } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 export function CardTable() {
 
-    return (<Col>
-        <table className="table">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            </tr>
-            <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            </tr>
-            <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            </tr>
-        </tbody>
-        </table>
-    </Col>);
+    return (<Container className="mt-2">
+        <Row>
+        <Col style={{textAlign: "center"}}>
+            <h4>List of Flashcards</h4>
+        </Col>
+        </Row>
+        <Row>
+        <Col>
+            <table className="table">
+            <thead>
+                <tr>
+                <th scope="col">Front</th>
+                <th scope="col">Back</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                </tr>
+                <tr>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                </tr>
+                <tr>
+                <td>Larry</td>
+                <td>the Bird</td>
+                </tr>
+            </tbody>
+            </table>
+        </Col>
+        </Row>
+    </Container> );
 }
