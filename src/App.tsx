@@ -10,14 +10,14 @@ import { CardTable } from './components/CardTable';
 
 const INITIAL_CARDS: flashCard[] = [{
     id: 1,
-    front: 'Front',
-    back: 'Back',
+    front: 'Apple',
+    back: 'Red',
     isFront: true
   },
   {
     id: 2,
-    front: 'Up side',
-    back: 'Down side',
+    front: 'Banana',
+    back: 'Yellow',
     isFront: true
   }]
 
