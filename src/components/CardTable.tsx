@@ -19,8 +19,8 @@ export function CardTable({cardPile}: {cardPile: flashCard[]}) {
                 </tr>
             </thead>
             <tbody>
-                {cardPile.map( (card: flashCard) =>
-                    <tr>
+                {cardPile.map( (card: flashCard, index: number) =>
+                    <tr key={index}>
                     <td>{card.front}</td>
                     <td>{card.back}</td>
                     </tr>
