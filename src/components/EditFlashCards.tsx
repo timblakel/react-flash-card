@@ -81,47 +81,65 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
         <Row>
             {/* Add new card */}
             <Col style={{textAlign: "left"}}>
-                <Form>
-                    <Form.Group className="mb-1" controlId="newCardFront">
-                        <Form.Label>Front</Form.Label>
-                        <Form.Control type="text" placeholder="card front" data-testid="newCardFrontIn"
-                        onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
-                            setNewFront(event.target.value);
-                        }} />
-                    </Form.Group>
+                <Row>
+                    <Col style={{textAlign: "center"}}>
+                        <h4>Add a new card</h4>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form>
+                            <Form.Group className="mb-1" controlId="newCardFront">
+                                <Form.Label>Front</Form.Label>
+                                <Form.Control type="text" placeholder="card front" data-testid="newCardFrontIn"
+                                onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
+                                    setNewFront(event.target.value);
+                                }} />
+                            </Form.Group>
 
-                    <Form.Group className="mb-2" controlId="newCardBack">
-                        <Form.Label>Back</Form.Label>
-                        <Form.Control type="text" placeholder="card back" data-testid="newCardBackIn" 
-                        onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
-                            setNewBack(event.target.value);
-                        }} />
-                    </Form.Group>
-                    <Button onClick={addCard} variant="secondary" type="reset">Add Flash Card</Button>
-                </Form>
+                            <Form.Group className="mb-2" controlId="newCardBack">
+                                <Form.Label>Back</Form.Label>
+                                <Form.Control type="text" placeholder="card back" data-testid="newCardBackIn" 
+                                onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
+                                    setNewBack(event.target.value);
+                                }} />
+                            </Form.Group>
+                            <Button onClick={addCard} variant="secondary" type="reset">Add Flash Card</Button>
+                        </Form>
+                    </Col>
+                </Row>
             </Col>
 
             {/* Edit Current Card */}
             <Col style={{textAlign: "left"}}>
-                <Form>
-                    <Form.Group className="mb-1" controlId="newCurrFront">
-                        <Form.Label>Front</Form.Label>
-                        <Form.Control type="text"
-                        onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
-                            editNewCurrCard(event.target.value,true);
-                        }} />
-                    </Form.Group>
+                <Row>
+                <Col style={{textAlign: "center"}}>
+                        <h4>Edit the current card</h4>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <Form>
+                            <Form.Group className="mb-1" controlId="newCurrFront">
+                                <Form.Label>Front</Form.Label>
+                                <Form.Control type="text"
+                                onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
+                                    editNewCurrCard(event.target.value,true);
+                                }} />
+                            </Form.Group>
 
-                    <Form.Group className="mb-2" controlId="newCurrBack">
-                        <Form.Label>Back</Form.Label>
-                        <Form.Control type="text"
-                        onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
-                            editNewCurrCard(event.target.value,false);
-                        }} />
-                    </Form.Group>
-                    <Button onClick={saveNewCurrCard} variant="secondary">Save Current Card</Button>
-                    <Button onClick={deleteCurrCard} variant="secondary" className="ms-2 me-2">Delete Current Card</Button>
-                </Form>            
+                            <Form.Group className="mb-2" controlId="newCurrBack">
+                                <Form.Label>Back</Form.Label>
+                                <Form.Control type="text"
+                                onChange={(event: React.ChangeEvent<HTMLTextAreaElement>) => {
+                                    editNewCurrCard(event.target.value,false);
+                                }} />
+                            </Form.Group>
+                            <Button onClick={saveNewCurrCard} variant="secondary">Save Current Card</Button>
+                            <Button onClick={deleteCurrCard} variant="secondary" className="ms-2 me-2">Delete Current Card</Button>
+                        </Form>
+                    </Col>
+                </Row>            
             </Col>
         </Row>
         <Row>
