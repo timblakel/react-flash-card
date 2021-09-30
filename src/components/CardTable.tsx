@@ -3,10 +3,10 @@ import { flashCard } from "../interfaces/flashCard";
 
 export function CardTable({cardPile}: {cardPile: flashCard[]}) {
 
-    return (<Container className="mt-2">
+    return (<Container className="mt-4">
         <Row>
         <Col style={{textAlign: "center"}}>
-            <h4>List of Flashcards</h4>
+            <h4 className="fw-bold">List of Flashcards</h4>
         </Col>
         </Row>
         <Row>
