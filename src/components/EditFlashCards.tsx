@@ -21,10 +21,12 @@ export function EditFlashCards({cardPile, setCardPile, currentCard, setCurrentCa
     // Boolean, true when only one card is left in the pile
     const [oneCard, setOneCard] = useState<boolean>(false);
 
+    // Save card pile to local storage
     function saveCards(): void {
         localStorage.setItem(LOCAL_STORAGE_CARDS,JSON.stringify(cardPile));
     }
 
+    // Add card to pile and set as current
     function addCard(): void {
         let newId: number = cardPile[cardPile.length-1].id + 1;
         let newCard: flashCard = {
