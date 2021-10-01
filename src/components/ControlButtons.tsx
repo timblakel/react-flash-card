@@ -8,6 +8,7 @@ export function ControlButtons({setCurrentCard, currentCard, setCardPile, cardPi
         cardPile: flashCard[]
     }): JSX.Element {
     
+    // Set current card to be flipped and adjust in card pile
     function flipCard() {
         let flippedCard: flashCard = {...currentCard};
         flippedCard.isFront = !flippedCard.isFront;
