@@ -13,6 +13,7 @@ export function FlashCardViewer({currentCard}: {currentCard: flashCard}): JSX.El
         }
     }
 
+    // get card background color
     function getCardBg(): string {
         if (currentCard.isFront) {
             return "primary";
